@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 17 24 39;
+    --card: 255 255 255;
+    --card-foreground: 17 24 39;
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
+    --primary: 79 70 229;
+    --primary-foreground: 255 255 255;
+    --secondary: 243 244 246;
+    --secondary-foreground: 17 24 39;
+    --muted: 243 244 246;
+    --muted-foreground: 107 114 128;
+    --accent: 243 244 246;
+    --accent-foreground: 17 24 39;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 229 231 235;
+    --input: 229 231 235;
+    --ring: 79 70 229;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 17 24 39;
+    --foreground: 249 250 251;
+    --card: 31 41 55;
+    --card-foreground: 249 250 251;
+    --popover: 31 41 55;
+    --popover-foreground: 249 250 251;
+    --primary: 99 102 241;
+    --primary-foreground: 255 255 255;
+    --secondary: 55 65 81;
+    --secondary-foreground: 249 250 251;
+    --muted: 55 65 81;
+    --muted-foreground: 156 163 175;
+    --accent: 55 65 81;
+    --accent-foreground: 249 250 251;
+    --destructive: 185 28 28;
+    --destructive-foreground: 249 250 251;
+    --border: 55 65 81;
+    --input: 55 65 81;
+    --ring: 99 102 241;
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--border) / 0.15);
+  }
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+  }
+  input, textarea, select {
+    color: inherit;
+    background-color: transparent;
+  }
+}
+
+/* Custom dark mode utility classes to supplement standard Tailwind */
+.dark .bg-white {
+  @apply bg-gray-800 text-gray-100;
+}
+.dark .bg-gray-50 {
+  @apply bg-gray-900 text-gray-100;
+}
+.dark .bg-gray-100 {
+  @apply bg-gray-700 text-gray-100;
+}
+.dark .bg-gray-100/80 {
+  @apply bg-gray-700/80 text-gray-100;
+}
+.dark .bg-gray-200 {
+  @apply bg-gray-700 text-gray-100;
+}
+.dark .bg-gray-200/50 {
+  @apply bg-gray-700/50 text-gray-100;
+}
+.dark .bg-gray-50\/50 {
+  @apply bg-gray-900/50;
+}
+.dark .border-gray-100 {
+  @apply border-gray-700;
+}
+.dark .border-gray-200 {
+  @apply border-gray-700;
+}
+.dark .text-gray-900 {
+  @apply text-white;
+}
+.dark .text-gray-800 {
+  @apply text-gray-100;
+}
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+.dark .text-gray-400 {
+  @apply text-gray-300;
+}
+.dark .text-gray-300 {
+  @apply text-gray-200;
+}
+.dark .hover:bg-gray-100:hover {
+  @apply hover:bg-gray-700;
+}
+.dark .shadow-sm {
+  @apply shadow-2xl shadow-black/20;
+}
+.dark .bg-white\/80 {
+  @apply bg-gray-800/80;
+}
+.dark .bg-white\/90 {
+  @apply bg-gray-800/90;
+}
+.dark .shadow-indigo-100 {
+  @apply shadow-indigo-900/20;
+}
+.dark .bg-gray-50\/80 {
+  @apply bg-gray-900/80;
+}
+.dark .shadow-indigo-200 {
+  @apply shadow-indigo-900/40;
+}
+.dark .bg-indigo-50 {
+  @apply bg-indigo-900/20 text-indigo-300;
+}
+.dark .bg-indigo-100 {
+  @apply bg-indigo-900/40 text-indigo-200;
+}
+.dark .ring-white {
+  @apply ring-gray-800;
+}
+.dark .bg-indigo-600 {
+  @apply bg-indigo-500 text-white;
+}
+.dark .text-indigo-600 {
+  @apply text-indigo-400;
+}
+.dark .text-indigo-500 {
+  @apply text-indigo-300;
+}
+.dark .bg-indigo-50 {
+  @apply bg-indigo-900/40 text-indigo-200;
+}
+.dark .bg-indigo-100 {
+  @apply bg-indigo-900/60 text-indigo-100;
+}
+.dark .bg-green-50 {
+  @apply bg-green-900/40 text-green-300;
+}
+.dark .bg-green-100 {
+  @apply bg-green-900/60 text-green-200;
+}
+.dark .text-green-600 {
+  @apply text-green-400;
+}
+.dark .text-green-700 {
+  @apply text-green-300;
+}
+.dark .bg-red-50 {
+  @apply bg-red-900/40 text-red-300;
+}
+.dark .bg-red-100 {
+  @apply bg-red-900/60 text-red-200;
+}
+.dark .text-red-600 {
+  @apply text-red-400;
+}
+.dark .bg-amber-50 {
+  @apply bg-amber-900/40 text-amber-300;
+}
+.dark .bg-amber-100 {
+  @apply bg-amber-900/60 text-amber-200;
+}
+.dark .text-amber-600 {
+  @apply text-amber-400;
+}
+.dark .bg-orange-50 {
+  @apply bg-orange-900/40 text-orange-300;
+}
+.dark .bg-orange-100 {
+  @apply bg-orange-900/60 text-orange-200;
+}
+.dark .text-orange-600 {
+  @apply text-orange-400;
+}
+.dark .placeholder\:text-gray-400 {
+  @apply placeholder:text-gray-500;
+}
+/* Ensure input text is always visible and contrasty in dark mode */
+.dark input, .dark textarea, .dark select {
+  @apply text-gray-100 bg-gray-900/50 border-gray-700;
+}
+.dark input::placeholder, .dark textarea::placeholder {
+  @apply text-gray-500;
+}
+
+/* Custom Scrollbar for Dark Mode */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+.dark ::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full border-2 border-gray-900 hover:bg-gray-600;
+}

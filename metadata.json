@@ -1,0 +1,6 @@
+{
+  "name": "Smart Campus Connection",
+  "description": "A comprehensive campus management and communication platform with role-based access control, real-time messaging, and academic administrative tools.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
